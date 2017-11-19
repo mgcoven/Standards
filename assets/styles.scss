@@ -1,0 +1,38 @@
+---
+---
+
+html, body {
+  background-color: #1C2329;
+  color: #EDEDED;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: rgb(87,169,221);
+  &:visited {
+    color: rgb(142, 115, 186);
+  }
+  &:hover {
+    color: rgba(87,169,221, 0.75);
+  }
+  &:active {
+    color: rgb(253, 198, 51);
+  }
+}
+
+article {
+  display: block;
+  margin: 0 10%;
+
+  /* Large desktop */
+  @media (min-width: 1200px) {margin: 0 25%}
+
+  /* Portrait tablet to landscape and desktop */
+  @media (min-width: 768px) and (max-width: 979px) {margin: 0 20%}
+
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 767px) {margin: 0 10%}
+
+  /* Landscape phones and down */
+  @media (max-width: 480px) {margin: 0}
+}

@@ -11,8 +11,14 @@
   {% if page.date %}
   	<meta name="DC.date" scheme="W3CDTF" content="{{ page.date | date: '%F' }}">
   {% endif %}
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+  <link rel="stylesheet" href="{{ site.url }}/assets/styles.css" type="text/css">
 </head>
 <body>
-  <h1>{{ page_title }}</h1>
-  {{content}}
+  <article>
+    <h1>{{ page_title }}</h1>
+    {{content}}
+  </article>
 </body>
