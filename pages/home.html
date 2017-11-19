@@ -1,0 +1,9 @@
+---
+title: List of Standards
+permalink: /
+---
+<ul>
+  {% for standard in site.standards %}
+  <li><a href="{{ standard.url }}">{{ standard.slug | upcase | append: ': ' | append: standard.title }}</a></li>
+  {% endfor %}
+</ul>
