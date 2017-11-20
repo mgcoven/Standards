@@ -12,10 +12,10 @@
   	<meta name="DC.date" scheme="W3CDTF" content="{{ page.date | date: '%F' }}">
   {% endif %}
 
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <link rel="canonical" href="{{ site.url | append: site.baseurl }}{{ page.url }}" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ site.url }}/assets/styles.css" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css" type="text/css">
 </head>
 <body>
   <article>
