@@ -36,3 +36,17 @@ article {
   /* Landscape phones and down */
   @media (max-width: 480px) {margin: 0}
 }
+
+.bigtable {
+  border-collapse: collapse;
+
+  > table, td, th {
+    padding: 1em;
+    border: 1px solid #aaa;
+  }
+}
+
+img.emoji {
+  height: 3em;
+  width: auto;
+}
