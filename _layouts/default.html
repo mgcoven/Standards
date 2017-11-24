@@ -15,9 +15,9 @@
 
 
   {% if page.image %}
-  	{% assign page_image = site.url | append: site.baseurl | append: '/assets/og-image/' | append: page.image %}
+  	{% assign page_image = site.url | append: site.baseurl | append: '/assets/og-images/' | append: page.image %}
   {% else %}
-  	{% assign page_image = site.url | append: site.baseurl | append: '/assets/og-image/default.jpg' %}
+  	{% assign page_image = site.url | append: site.baseurl | append: '/assets/og-images/default.jpg' %}
   {% endif %}
 
   {% assign page_url = site.url | append: site.baseurl | append: page.url %}
