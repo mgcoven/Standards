@@ -7,12 +7,53 @@
   	{% assign page_title = page.title %}
   {% endif %}
 
+  {% if page.description %}
+	 {% assign page_description = page.description %}
+  {% else %}
+  	{% assign page_description = site.description %}
+  {% endif %}
+
+
+  {% if page.image %}
+  	{% assign page_image = site.url | append: site.baseurl | append: '/assets/og-image/' | append: page.image %}
+  {% else %}
+  	{% assign page_image = site.url | append: site.baseurl | append: '/assets/og-image/default.jpg' %}
+  {% endif %}
+
+  {% assign page_url = site.url | append: site.baseurl | append: page.url %}
+
   <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
   {% if page.date %}
   	<meta name="DC.date" scheme="W3CDTF" content="{{ page.date | date: '%F' }}">
   {% endif %}
 
-  <link rel="canonical" href="{{ site.url | append: site.baseurl }}{{ page.url }}" />
+  <!-- OpenGraph Tags -->
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:url" content="{{ page_url }}">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <meta property="og:image" content="{{ page_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  {% if page.title %}
+  	<meta property="og:type" content="article">
+  {% else %}
+  	<meta property="og:type" content="website">
+  {% endif %}
+
+  <!-- Twitter tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.share.twitter_username }}"> <!-- TODO: Add a username to config -->
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:url" content="{{ page_url }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:creator" content="@{{ site.share.twitter_username }}"> <!-- TODO: Add username or remove -->
+  <meta name="twitter:image:src" content="{{ page_image }}">
+
+  <link rel="canonical" href="{{ page_url }}" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css" type="text/css">
