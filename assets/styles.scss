@@ -22,7 +22,7 @@ a {
 
 article {
   display: block;
-  margin: 0 10%;
+  margin: 0 5%;
 
   /* Large desktop */
   @media (min-width: 1200px) {margin: 0 25%}
@@ -31,7 +31,7 @@ article {
   @media (min-width: 768px) and (max-width: 979px) {margin: 0 20%}
 
   /* Landscape phone to portrait tablet */
-  @media (max-width: 767px) {margin: 0 10%}
+  @media (max-width: 767px) {margin: 0 5%}
 
   /* Landscape phones and down */
   @media (max-width: 480px) {margin: 0}
