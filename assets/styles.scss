@@ -44,6 +44,14 @@ article {
     padding: 1em;
     border: 1px solid #aaa;
   }
+
+  h4 {
+    margin-top: 0px;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0px;
+  }
 }
 
 emoji {
