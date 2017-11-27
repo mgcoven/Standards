@@ -16,3 +16,5 @@ defaults:
     values:
       is_standard: true
       layout: "standard"
+plugins:
+  - "jekyll-sitemap"
