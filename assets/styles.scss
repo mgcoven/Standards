@@ -54,6 +54,41 @@ article {
   }
 }
 
+ul.standards {
+  list-style-type: none;
+  padding: 0;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 0.2em;
+    padding: 0.5em 1em;
+    background-color: #252F38;
+
+    &:not(:first-child) {
+      margin-top: 0.5em;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    overflow: hidden;
+  }
+
+  img {
+    float: left;
+    margin-right: 1em;
+    max-height: 6em;
+
+    @media (max-width: 480px) {
+      max-height: 4em;
+      float: right;
+      margin-right: 0px;
+    }
+  }
+}
+
 img.emoji {
   height: 3em;
   width: auto;
