@@ -69,6 +69,18 @@
   <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico">
   <meta name="msapplication-config" content="{{ favicon_base }}/browserconfig.xml">
   <meta name="theme-color" content="#1c2329">
+
+  {% if jekyll.environment == "production" %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
 </head>
 <body>
   <article>
