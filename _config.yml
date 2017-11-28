@@ -1,5 +1,7 @@
 title: Magical Girl Standards
 description: Internet etiquette, magic and related tomfoolery
+url: "https://magicalgirls.club"
+enforce_ssl: magicalgirls.club
 google_analytics: UA-110259127-1
 collections:
   standards:
