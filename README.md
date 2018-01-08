@@ -1,4 +1,8 @@
-# Standards
+# Magical Girl Standards
+
+The Magical Girl Standards website aims to reduce confusion and miscommunication by defining appropriate behaviour online and off.
+
+By codifying existing behaviour within a non-restrictive framework the Standards promote accessibility without coming at the cost of stifling innovation. In other words: here are some ways people do things, but feel free to do things your own way.
 
 ## Installation
 
